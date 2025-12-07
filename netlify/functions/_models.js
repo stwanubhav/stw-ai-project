@@ -1,36 +1,35 @@
-// List of models you want to compare side by side
-// You can change labels or models later.
+// Central config: list of models to compare side by side
+// These models are compatible with Hugging Face Router /v1/chat/completions
 
 const MODELS = [
   {
-    id: "mistral",
-    label: "Mistral 7B Instruct",
+    id: "gemma",
+    label: "Gemma 2B Instruct",
     provider: "huggingface",
-    modelName: "mistralai/Mistral-7B-Instruct-v0.3",
-    description: "A strong general-purpose model for reasoning and writing.",
+    modelName: "google/gemma-2-2b-it",
+    description: "Small but solid general chat & Q&A model.",
     settings: {
       max_new_tokens: 256,
       temperature: 0.7,
     },
   },
   {
-    id: "gemma",
-    label: "Gemma 2B Instruct",
+    id: "qwen7b",
+    label: "Qwen 2.5 7B Instruct (1M)",
     provider: "huggingface",
-    modelName: "google/gemma-2-2b-it",
-    description: "Smaller but efficient model for chat & coding.",
+    modelName: "Qwen/Qwen2.5-7B-Instruct-1M",
+    description: "Strong conversational model with long context.",
     settings: {
       max_new_tokens: 256,
-      temperature: 0.6,
+      temperature: 0.7,
     },
   },
   {
-    id: "phi",
-    label: "Phi-3 Mini 4K Instruct",
+    id: "deepseek",
+    label: "DeepSeek R1",
     provider: "huggingface",
-    // FIXED CASE SENSITIVE NAME 🚀
-    modelName: "microsoft/Phi-3-mini-4k-instruct",
-    description: "Very strong small model with clean outputs.",
+    modelName: "deepseek-ai/DeepSeek-R1",
+    description: "Reasoning-focused model, good for step-by-step answers.",
     settings: {
       max_new_tokens: 256,
       temperature: 0.65,
